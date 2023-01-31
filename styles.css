@@ -1,0 +1,243 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+p, small, a {
+    font-family: 'Alata', sans-serif;
+    margin: 0;
+}
+
+.header__logo {
+    height: 24px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+}
+.nav__link--line {
+    height: 2px;
+    width: 0px;
+    background-color: white;
+}
+a:hover + .nav__link--line {
+    width: 25px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+header nav ul {
+    justify-content: flex-end;
+    gap: 48px;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    padding: 48px 15%;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#immersive-experiences {
+    background-image: url('images/desktop/image-hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgab(0,0,0,.25);
+    padding: 150px 15% 100px;
+}
+
+#immersive-experiences h1 {
+    border: 2px solid white;
+    color: white;
+    font-size: 56px;
+    padding: 36px;
+    width: 50%;
+    font-weight: 300;
+}
+
+#leader-interactive {
+    padding: 100px 15% 100px;
+    position: relative;
+}
+
+#interactive__img {
+    height: 400px;
+}
+
+#leader-interactive div {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    padding: 80px 15% 0 80px;
+    background-color: white;
+    width: 52%;
+}
+
+#leader-interactive div h2 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+#leader-interactive div p {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(0, 0%, 55%);
+}
+
+#our-creations {
+    padding: 50px 15% 50px;
+}
+
+.our_creations__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.our_creations__header h2 {
+    font-size: 36px;
+    font-weight: 300;
+}
+
+.our_creations__header button {
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    text-transform: uppercase;
+    font-family: 'Alata';
+    letter-spacing: 3px;
+    padding: 6px 30px;
+    cursor: pointer;
+}
+
+.our_creations__header button:hover {
+    background-color: black;
+    color: white;
+}
+
+#our-creations__grid {
+    display: grid;
+    padding: 75px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+#our-creations__grid div {
+    height: 400px;
+    background-color: rgba(0,0,0,.10);
+    background-blend-mode: normal;
+    color: white;
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+#our-creations__grid div:hover {
+    background-color: rgba(255,255,255,.75);
+    background-blend-mode: lighten;
+    color: black;
+}
+
+#our-creations__grid h3 {
+    font-size: 28px;
+    font-weight: 300;
+}
+
+#earth__item {
+    background-image: url('images/desktop/image-deep-earth.jpg');
+}
+#arcade__item {
+    background-image: url('images/desktop/image-night-arcade.jpg');
+}
+#soccer__item {
+    background-image: url('images/desktop/image-soccer-team.jpg');
+}
+#grid__item {
+    background-image: url('images/desktop/image-grid.jpg');
+}
+#above__item {
+    background-image: url('images/desktop/image-from-above.jpg');
+}
+#pocket__item {
+    background-image: url('images/desktop/image-pocket-borealis.jpg');
+}
+#curiosity__item {
+    background-image: url('images/desktop/image-curiosity.jpg');
+}
+#fisheye__item {
+    background-image: url('images/desktop/image-fisheye.jpg');
+}
+
+footer {
+    background-color: black;
+    padding: 36px 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.footer__logo {
+    height: 20px;
+    width: 120px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+footer nav ul {
+    gap: 24px;
+}
+
+footer div:last-of-type ul {
+    justify-content: flex-end;
+    gap: 24px;
+}
+
+footer div:last-of-type ul li {
+    width: 25px;
+}
+
+small {
+    opacity: .5;
+}
