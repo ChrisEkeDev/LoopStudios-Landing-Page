@@ -47,6 +47,10 @@ ul {
     margin: 0;
 }
 
+.mobile-menu__icon {
+    display: none;
+}
+
 header nav ul {
     justify-content: flex-end;
     gap: 48px;
@@ -58,6 +62,51 @@ ul li {
     align-items: center;
     gap: 6px;
 }
+
+#mobile__overlay {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    z-index: 100;
+}
+
+.mobile-menu__contents {
+    display: flex;
+    flex-direction: column;
+    padding: 36px 7%;
+}
+
+.mobile-menu__logo {
+    height: 24px;
+
+}
+
+.mobile-menu__contents div:first-of-type {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mobile-menu__contents div:last-of-type {
+    flex: 1;
+}
+.mobile-menu__contents div:last-of-type ul {
+    display: flex;
+    flex-direction: column;
+    padding: 150px 0;
+    gap: 36px;
+    align-items: flex-start;
+    text-transform: uppercase;
+}
+
+.mobile-menu__contents div:last-of-type ul li a {
+    font-size: 36px;
+    font-family: 'Josefin Sans';
+    font-weight: 300;
+}
+
 
 header {
     position: absolute;
@@ -133,7 +182,8 @@ header {
     font-weight: 300;
 }
 
-.our_creations__header button {
+.our_creations__header button,
+.our_creations__mobile_btn {
     border: 1px solid black;
     color: black;
     background-color: white;
@@ -205,6 +255,10 @@ header {
     background-image: url('images/desktop/image-fisheye.jpg');
 }
 
+.our_creations__mobile_btn {
+    display: none;
+}
+
 footer {
     background-color: black;
     padding: 36px 15%;
@@ -240,4 +294,113 @@ footer div:last-of-type ul li {
 
 small {
     opacity: .5;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding: 36px 7%;
+    }
+    header nav {
+        display: none;
+    }
+    .mobile-menu__icon {
+        display: block;
+    }
+
+    #immersive-experiences {
+        background-image: url('images/mobile/image-hero.jpg');
+        padding: 250px 7% 250px;
+    }
+
+    #immersive-experiences h1 {
+        width: 100%;
+        font-size: 48px;
+        padding: 36px 24px;
+    }
+
+    #leader-interactive {
+        padding: 100px 7% 0px;
+    }
+
+    #leader-interactive div {
+        position: static;
+        padding: 50px 7%;
+        width: 100%;
+        text-align: center;
+    }
+
+    #interactive__img {
+        height: auto;
+        width: 100%;
+    }
+    #our-creations {
+        padding: 50px 7% 100px;
+    }
+    .our_creations__header {
+        justify-content: center;
+    }
+
+    .our_creations__header button {
+        display: none;
+    }
+
+    #our-creations__grid {
+        padding: 50px 0;
+        grid-template-columns: 1fr;
+    }
+
+    #our-creations__grid div {
+        height: 150px;
+        padding: 24px;
+    }
+
+    #earth__item {
+        background-image: url('images/mobile/image-deep-earth.jpg');
+    }
+    #arcade__item {
+        background-image: url('images/mobile/image-night-arcade.jpg');
+    }
+    #soccer__item {
+        background-image: url('images/mobile/image-soccer-team.jpg');
+    }
+    #grid__item {
+        background-image: url('images/mobile/image-grid.jpg');
+    }
+    #above__item {
+        background-image: url('images/mobile/image-from-above.jpg');
+    }
+    #pocket__item {
+        background-image: url('images/mobile/image-pocket-borealis.jpg');
+    }
+    #curiosity__item {
+        background-image: url('images/mobile/image-curiosity.jpg');
+    }
+    #fisheye__item {
+        background-image: url('images/mobile/image-fisheye.jpg');
+    }
+
+    .our_creations__mobile_btn {
+        display: block;
+        padding: 12px 56px;
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 48px 7%;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        padding: 36px 0 48px;
+    }
+
+
 }
